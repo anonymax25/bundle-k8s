@@ -6,9 +6,9 @@ spec:
   selector:
     app: api
   ports:
-    - port: 3000
+    - protocol: TCP
+      port: 80
       targetPort: 3000
-  type: LoadBalancer
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -36,4 +36,14 @@ spec:
           env:
             - name: TEST_VARIABLE
               value: test2
+            - name: DB_HOST
+              value: postgres
+            - name: DB_PORT
+              value: '5432'
+            - name: DB_USERNAME
+              value: postgres
+            - name: DB_PASSWORD
+              value: postgres
+            - name: DB_NAME
+              value: postgres
           imagePullPolicy: Always
