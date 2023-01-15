@@ -1,77 +1,21 @@
-apiVersion: v1
-kind: Secret
-metadata:
-  name: hello-app-tls
-type: kubernetes.io/tls
-data:
-  server.crt: |
-       -----BEGIN CERTIFICATE-----
-MIIDDzCCAfegAwIBAgIUIYz3iCCZbUuNiKE376Wij/hoQqUwDQYJKoZIhvcNAQEL
-BQAwFzEVMBMGA1UEAwwMYW5vbnltYXguZGV2MB4XDTIzMDExNTE2MjY0MVoXDTI0
-MDExNTE2MjY0MVowFzEVMBMGA1UEAwwMYW5vbnltYXguZGV2MIIBIjANBgkqhkiG
-9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn+HYAvb4faAgeFGFSDlGXL98lbRNF6XvBFd2
-yOitKqV51RdpUEfee6iZEGJNyBjYRI7AMie41pvrWsAhwjjLuT0gRUcEei6OrVav
-4Ih2gXVvTOGUC/+LTIAMpcStT4bx7nTPKk9pQK1q2UygmAPqp/Uj3Q9O4l3WEOTf
-dGJp1h4TtQI8SSOFf0NwMR4tFfaHnJV89/x48uDRDq3yHKSJXvnpY2WquZ/KsxOH
-+RGjVfkZuydKPW+h2zb2lH2bx37uXAfKCgN5lb6nohElIJgwJyrDEIL2Kh4ucAXz
-jneyUFWq3CQiEExpGZUt64mqOspRpZ9Vv58ZPK32cmU4EVXOYQIDAQABo1MwUTAd
-BgNVHQ4EFgQU72R5vCIQaWDOkm0igsFNGvYg6UswHwYDVR0jBBgwFoAU72R5vCIQ
-aWDOkm0igsFNGvYg6UswDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAR0dx8VKliZ/ouA2UG9E6wW7cGx9IehtSwo7TZj8/jYLqgCoWnq5iZaBD+WP9
-jpsHuUn1zq/oiFHEnUWLg306kfWavu7EW5F+d0EGaEIZ2yh5prm/RuW/qMaRdY70
-k26aw3hc/EJEa1TnpeEGH5Pc10LtTMKOaTN2VpXlfMqev4WZ0P6lJb4z4Gt/Zv+O
-nkabvEIBqIrSMHitthymT4i3wum0ssaKFEM9B5pUj0zL8NFOpbYFbyfAYVSpd8f4
-91F1gqqMPrI5DdMkq9Mk7hUwiQtT4/wo+wReY2JFDnP0gmaXmSOpPBM3uaZHL3lt
-9mc0AHCCZcO5OQgHjVCe2JbCtg==
------END CERTIFICATE-----
-  server.key: |
-       -----BEGIN PRIVATE KEY-----
-MIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCf4dgC9vh9oCB4
-UYVIOUZcv3yVtE0Xpe8EV3bI6K0qpXnVF2lQR957qJkQYk3IGNhEjsAyJ7jWm+ta
-wCHCOMu5PSBFRwR6Lo6tVq/giHaBdW9M4ZQL/4tMgAylxK1PhvHudM8qT2lArWrZ
-TKCYA+qn9SPdD07iXdYQ5N90YmnWHhO1AjxJI4V/Q3AxHi0V9oeclXz3/Hjy4NEO
-rfIcpIle+eljZaq5n8qzE4f5EaNV+Rm7J0o9b6HbNvaUfZvHfu5cB8oKA3mVvqei
-ESUgmDAnKsMQgvYqHi5wBfOOd7JQVarcJCIQTGkZlS3riao6ylGln1W/nxk8rfZy
-ZTgRVc5hAgMBAAECgf82w3TqDw4ueZqlm8a7ZmLjgfN6k7eUUhH8urjFOG2YHfYN
-N2erR/K9CJLlOcbKszfgw8SxaUm2uNF01Dq7/BhL6tQS5rBx6WCVnwu/LP7qeP8W
-pm2/bliYa4Ppg+SZSO+1be1H4Mt8i+n9ZHHdn/nQbfdK0OOERf/86WhgxRTbcgak
-zs9AfyKrOYZJsPgFTFcgvtP9D6elRQJb0OKeaBmzpnCQAOyZ0BJwztuj9OLc3NDy
-H+TGrTXtA/Th4jHqzEyT2GrJXjMqSxBGAbER5hGRc80bTR1+ubnBDzwmICnwV4/6
-xZTgISsyw8XdLzou2XEBm76I53J1eg8BbEOV1XECgYEA34wUZ+NBzsKaRuDmkvzr
-4ZGmg0+OyGOOMX1IgtEwo4RoJviDXR54fz87IKwVD0P2tkUDz4aZY2EdDN8opfN/
-iFUAqMQx2A4Nvei8aXhe8NbGL+wgaWLqmjwyXvhyahf4V9OE5YLeS5CrsYIKMiBQ
-a8UyGBDQVdxKItWCFYD8/FECgYEAtxe3CyVOnClFhIJ+voUDBpm8j4JvGIJn4oYL
-3Jmbw/aq5EhhhVF5oTOaORrNbKNBi/sllxqfiv8Bn497DWaJzmV9BMmjsGU5pF/m
-cVo6quIfQQrn1RUIPNxSm9LS67Q9777Xn2JMmEonyn8nQQVEzUzZQl+7Ss0t8q8B
-XgYd/RECgYBTdeUYdExZeWZIGCd9sVgPu2VDmSxhvGmWKIQt8xQJuKF6C0ZgOcQb
-HexhYl3qeSFfI50smcAizlseNyLh8msm5zV7zOQfGgAfawkNB5fKqyULN0lSj0+v
-jdHwiymMWq6pe5seZSHBbJ3tg/Nyi4X69oChY4WkyL4VC0mp5aKOQQKBgQCKpECN
-BhECmxXzA0WqStpBs0RffytU6dp0Y4Cz6PVUbIJ3HoAKDeoGMScFOtB3BSBrOR/7
-zcMl43d9NY6+VPjg+2SxrWZv+hat65h6GRL3twZnoDRw295DB6reJ8RjizajRmXM
-YQkTAIQlCCfXSoAQ3bJeWlNejwPOEsr8QbGPoQKBgHJ4IU3wpy6PI2MUa3I7k4Bp
-CIQgoId292nz5f9RXCcjMHMaxt5g7vwiIa5tusLrNNLnvgJthZzvLApqfW5+cGdP
-9TAptDJUiEz09z+9NrJ5MVmv6LTjuNhwudMf1rzmC2aW4UoNaCfbM4BDGJ/zvnm7
-niLnN9/zO9xv6///ISsJ
------END PRIVATE KEY-----
-
----
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
-metadata: 
-  name: tls-ingress
-spec: 
-  rules: 
-    - 
-      host: anonymax.dev
-      http: 
-        paths: 
-          - 
-            backend: 
-              serviceName: api
-              servicePort: 80
-            path: /
-  tls: 
-    - 
-      hosts: 
-        - anonymax.dev
-      secretName: my-tls-secret
+metadata:
+  name: hello-app-ingress
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - anonymax.dev
+    secretName: hello-app-tls
+  rules:
+  - host: "anonymax.dev"
+    http:
+      paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: api
+              port:
+                number: 80
