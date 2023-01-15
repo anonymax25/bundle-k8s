@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Ingress
+metadata: 
+  name: tls-ingress
+spec: 
+  rules: 
+    - 
+      host: anonymax.dev
+      http: 
+        paths: 
+          - 
+            backend: 
+              serviceName: api
+              servicePort: 80
+            path: /
+  tls: 
+    - 
+      hosts: 
+        - anonymax.dev
+      secretName: my-tls-secret
