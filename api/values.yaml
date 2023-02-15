@@ -1,0 +1,22 @@
+prometheus:
+  namespace: app
+  alertmanager:
+    enabled: false
+
+  pushgateway:
+    enabled: false
+
+  nodeExporter:
+    enabled: true # value of k8s node machine
+
+grafana:
+  namespace: app
+  service:
+    type: NodePort
+  datasources:
+    datasources.yaml:
+      apiVersion: 1
+      datasources:
+      - name: Prometheus
+        type: prometheus
+        url: http://api-prometheus-server

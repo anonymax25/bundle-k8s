@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: front
-          image: natin56y/front:latest
+          image: natin56y/front
           resources:
             limits:
               memory: "128Mi"
